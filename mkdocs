@@ -1,0 +1,58 @@
+site_name: Jenna Chebaro - Fab Academy
+site_description: Fab Academy documentation site for Jenna Chebaro
+site_author: Jenna Chebaro
+copyright: Copyright 2022 Jenna Chebaro - Creative Commons Attribution Non Commercial
+
+site_url: https://fabacademy.org/2025/labs/charlotte/students/jenna-chebaro/
+
+extra:
+  social:
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/fabacademany
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/fabacademany
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/fabacademany
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/academany
+
+theme:
+  name: material
+  palette:
+    primary: "#FFB661"
+    accent: "#E75480"
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  icon:
+    logo: material/school
+  favicon: images/favicon.svg
+
+  features:
+    - search
+    - navigation.tabs
+    - navigation.instant
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Assignments:
+      - Assignments Overview: assignments.md
+      - Project Management: projectmanagement.md
+  - Projects: projects.md
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      enabled: !ENV [ENABLED_GIT_REVISION_DATE, False]
+
+markdown_extensions:
+  - extra
+  - smarty
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
